@@ -233,6 +233,7 @@ function createArgoAddonConfig(environment: string, repoUrl: string): blueprints
                 sourceRepos: [
                     `git@github.com:${element.githubOrg}/${element.githubRepository}.git`,
                     `git@github.com:aws-samples/eks-blueprints-workloads.git`,
+                    `git@github.com:amicco/eks-blueprints-workloads.git`,
                 ],
             }
         );
