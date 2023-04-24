@@ -8,6 +8,10 @@ import { Construct } from 'constructs';
 // Team implementations
 import * as team from '../teams/pipeline-multi-env-gitops';
 
+// KubectlLayer bundles the 'kubectl' and 'helm' command lines
+import { KubectlV23Layer } from '@aws-cdk/lambda-layer-kubectl-v23';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+
 export function populateWithContextDefaults(app: cdk.App, defaultAccount: string, defaultRegion: string) {
     // Populate Context Defaults for the pipeline account
     let pipeline_account = app.node.tryGetContext('pipeline_account');
@@ -73,6 +77,10 @@ export default class PipelineMultiEnvGitops {
         }
 
         const clusterVersion = eks.KubernetesVersion.V1_23;
+        
+        declare const fn: lambda.Function;
+        const kubectl = new KubectlV23Layer(this, 'KubectlLayer');
+        fn.addLayers(kubectl);
 
         /* eslint-disable */
         const blueMNG = new blueprints.MngClusterProvider({
