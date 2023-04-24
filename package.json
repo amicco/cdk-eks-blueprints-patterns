@@ -26,9 +26,7 @@
     "typescript": "~4.8.4"
   },
   "dependencies": {
-    "@aws-cdk/lambda-layer-kubectl-v22": "^2.0.0",
     "@aws-cdk/lambda-layer-kubectl-v23": "^2.0.0",
-    "@aws-cdk/lambda-layer-kubectl-v24": "^2.0.0",
     "@aws-quickstart/eks-blueprints": "^1.6.0",
     "@datadog/datadog-eks-blueprints-addon": "^0.1.2",
     "@dynatrace/dynatrace-eks-blueprints-addon": "^0.0.3",
