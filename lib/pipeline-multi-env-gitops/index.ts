@@ -139,6 +139,9 @@ export default class PipelineMultiEnvGitops {
         const prodArgoAddonConfig = createArgoAddonConfig('prod', 'git@github.com:amicco/eks-blueprints-workloads.git');
 
         try {
+            
+            const kubectl = new KubectlV23Layer(scope, 'KubectlLayer');
+            fn.addLayers(kubectl);
 
             // const { gitOwner, gitRepositoryName } = await getRepositoryData();
             const gitOwner = 'amicco';
