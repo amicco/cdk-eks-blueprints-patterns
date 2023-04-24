@@ -9,8 +9,8 @@ import { Construct } from 'constructs';
 import * as team from '../teams/pipeline-multi-env-gitops';
 
 // KubectlLayer bundles the 'kubectl' and 'helm' command lines
-//import { KubectlV23Layer } from '@aws-cdk/lambda-layer-kubectl-v23';
-//import * as lambda from 'aws-cdk-lib/aws-lambda';
+import { KubectlV23Layer } from '@aws-cdk/lambda-layer-kubectl-v23';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
 export function populateWithContextDefaults(app: cdk.App, defaultAccount: string, defaultRegion: string) {
     // Populate Context Defaults for the pipeline account
