@@ -36,7 +36,6 @@
     "@rafaysystems/rafay-eks-blueprints-addon": "^0.0.2",
     "@snyk-partners/snyk-monitor-eks-blueprints-addon": "^1.1.0",
     "aws-cdk": "2.66.1",
-    "aws-cdk-lib": "^2.76.0",
     "eks-blueprints-cdk-kubeflow-ext": "0.1.9",
     "source-map-support": "^0.5.21"
   },
