@@ -65,8 +65,8 @@ export default class PipelineMultiEnvGitops {
         const testTeams = createTeamList('test', scope, pipelineProps.devEnv.account!);
         const prodTeams = createTeamList('prod', scope, pipelineProps.prodEnv.account!);
 
-        const kubectl = new KubectlV23Layer(scope, 'KubectlLayer');
-        fn.addLayers(kubectl);
+        //const kubectl = new KubectlV23Layer(scope, 'KubectlLayer');
+        //fn.addLayers(kubectl);
         
         try {
             // github-token is needed for CDK Pipeline functionality
